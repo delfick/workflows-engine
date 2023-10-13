@@ -1,8 +1,11 @@
 import attrs
 
-from workflows_engine import Workflow
-
 from . import application
+
+
+@attrs.define
+class Workflow:
+    name: str
 
 
 @attrs.define

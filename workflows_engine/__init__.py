@@ -1,4 +1,4 @@
+from .computations import Computation
 from .version import VERSION
-from .workflows import Workflow
 
-__all__ = ["VERSION", "Workflow"]
+__all__ = ["VERSION", "Computation"]
