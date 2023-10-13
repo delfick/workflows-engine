@@ -10,6 +10,13 @@ Changelog
 0.1.0 - TBD
     * TBD
 
+Example UI
+----------
+
+To run the example UI showing things run::
+
+  > ./workflows
+
 Local development
 -----------------
 

@@ -24,7 +24,7 @@ manager.add_local_dep(
     "{here}",
     "..",
     version_file=("workflows_engine", "version.py"),
-    name="workflows_engine[tests,pinned]=={version}",
+    name="workflows_engine[tests,ui-pinned]=={version}",
 )
 
 if "TOX_PYTHON" in os.environ:
