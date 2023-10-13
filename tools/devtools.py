@@ -132,8 +132,8 @@ class App:
         run(bin_dir / "dmypy", *args)
 
     @command
-    def workflows(self, bin_dir: Path, args: list[str]) -> None:
-        run(bin_dir / "python", "-m", "workflows_engine", *args)
+    def computations(self, bin_dir: Path, args: list[str]) -> None:
+        run(bin_dir / "python", "-m", "computations", *args)
 
 
 app = App()

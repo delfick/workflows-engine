@@ -1,7 +1,7 @@
-Workflows Engine
-================
+Computations
+============
 
-This is a playground repo for an idea for an api for a workflows engine.
+This is a playground repo for an idea for an api for a computations engine.
 
 
 Changelog
@@ -15,7 +15,7 @@ Example UI
 
 To run the example UI showing things run::
 
-  > ./workflows
+  > ./cli
 
 Local development
 -----------------

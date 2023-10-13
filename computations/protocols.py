@@ -30,7 +30,7 @@ class ComputationState(tp.Protocol):
     ended: datetime.datetime | None
     result_state: ResultState
     execution_state: ExecutionState
-    parent_state: tp.Union["ComputationState" | None]
+    parent_state: tp.Union["ComputationState", None]
 
 
 class ComputationStateWithValues(ComputationState, tp.Protocol):

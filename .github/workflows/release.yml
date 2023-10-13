@@ -20,8 +20,8 @@ jobs:
 
       - id: version
         run: |
-          version=$(python -c "import runpy; print(runpy.run_path('workflows_engine/version.py')['VERSION'])")
-          versiondash=$(python -c "import runpy; print(runpy.run_path('workflows_engine/version.py')['VERSION'].replace('.', '-'))")
+          version=$(python -c "import runpy; print(runpy.run_path('computations/version.py')['VERSION'])")
+          versiondash=$(python -c "import runpy; print(runpy.run_path('computations/version.py')['VERSION'].replace('.', '-'))")
 
           echo "version=$version" >> $GITHUB_OUTPUT
           echo "versiondash=$versiondash" >> $GITHUB_OUTPUT
@@ -29,8 +29,8 @@ jobs:
       - id: create-release
         uses: softprops/action-gh-release@v1
         with:
-          name: workflows-engine ${{ steps.version.outputs.version }}
-          body: "https://github.com/delfick/workflows_engine#release-${{ steps.version.outputs.versiondash }}"
+          name: computations ${{ steps.version.outputs.version }}
+          body: "https://github.com/delfick/computations#release-${{ steps.version.outputs.versiondash }}"
           tag_name: "release-${{ steps.version.outputs.version }}"
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_unmatched_files: true
