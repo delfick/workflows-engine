@@ -29,3 +29,8 @@ class ResultHasNoValue(ComputationsException):
 @attrs.define(frozen=True)
 class ArbitraryFutureException(ComputationsException):
     value: object
+
+
+@attrs.define(frozen=True)
+class UnableToDetermineResult(ComputationsException):
+    pass

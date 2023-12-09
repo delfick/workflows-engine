@@ -3,8 +3,14 @@ import enum
 import typing as tp
 from collections.abc import Iterator
 
-CoDataType = tp.TypeVar("CoDataType", covariant=True)
-DataType = tp.TypeVar("DataType")
+
+class Data(tp.Protocol):
+    def summary_for_audit_trail(self) -> str:
+        ...
+
+
+CoDataType = tp.TypeVar("CoDataType", covariant=True, bound=Data)
+DataType = tp.TypeVar("DataType", bound=Data)
 
 Instructions: tp.TypeAlias = Iterator[object]
 
@@ -86,7 +92,7 @@ class ComputationFuture(tp.Generic[CoDataType], tp.Protocol):
         ...
 
 
-ComputationResponse: tp.TypeAlias = Iterator[ComputationFuture[object]]
+ComputationResponse: tp.TypeAlias = Iterator[ComputationFuture[Data]]
 
 
 class ComputationAction(tp.Generic[DataType], tp.Protocol):
