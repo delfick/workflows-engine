@@ -24,7 +24,7 @@ manager.add_local_dep(
     "{here}",
     "..",
     version_file=("computations", "version.py"),
-    name="computations[tests]=={version}",
+    name="computations[tests,pinned,pinned-ulid]=={version}",
 )
 
 if "TOX_PYTHON" in os.environ:

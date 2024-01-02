@@ -13,11 +13,22 @@ authors = [
     { name = "Stephen Moore", email = "stephen@delfick.com" },
 ]
 dependencies = [
+    "attrs>=23.0.0"
 ]
 
 [project.optional-dependencies]
 tests = [
     "pytest==7.3.0",
+    "time-machine==2.13.0"
+]
+pinned = [
+    "attrs==23.1.0",
+]
+ulid=[
+    "python-ulid>=2.2.0"
+]
+pinned-ulid=[
+    "python-ulid>=2.2.0"
 ]
 
 [project.urls]
